@@ -9,10 +9,14 @@ class Delta:
 
 
     def __init__(self):
+        pass
+
+    #Star program
+    def start(self):
         self.values()
         self.calc_delta()
         self.checking_delta()
-        pass
+
 
     # Reciveing  theValues
     def values(self):
@@ -30,6 +34,7 @@ class Delta:
         if self.calc > 0:
             self.x1 = (-self.b + math.sqrt(self.calc)) / (2*self.a)
             self.x2 = (-self.b - math.sqrt(self.calc)) / (2*self.a)
+            print(f'O valor de delta foi: {self.calc}')
             print(f'x1= {self.x1} \n x2 = {self.x2}')
         
         elif self.calc == 0:
@@ -40,4 +45,4 @@ class Delta:
             print('No real root')
 
 start = Delta()
-start.__init__()
+start.start()
